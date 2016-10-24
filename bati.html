@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bati</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  </head>
+
+  <body>
+
+    <!-- Main container -->
+    <div class="container">
+      <div id="main" class="body-content">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Mensaje</h3>
+          </div>
+          <div class="panel-body">
+            <div class="input-group" style="width:100%">
+              <textarea id="batiin" class="form-control" rows="3">
+              </textarea>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Codificación Bati</h3>
+          </div>
+          <div class="panel-body">
+              <div class="well" id="batiresult">
+              </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Batihomologado por los batiexpertos del Bati</div>
+            <div class="panel-body">
+                <img src="http://3.bp.blogspot.com/_GSylkO4ELjw/SwrCzkDkIVI/AAAAAAAAAIo/TY1wYcnBi7I/s320/juan+carlos+batman.JPG" style="height:200px" class="img-rounded"/>
+                <img src="http://chemtrailsevilla.files.wordpress.com/2012/06/sith-lord-ratzinger.jpg" style="height:200px" class="img-rounded"/>
+                <img src="http://figo29.files.wordpress.com/2011/10/one-of-the-most-famous-celebrations-in-history.jpg" style="height:200px" class="img-rounded"/>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Site footer -->
+    <div class="footer">
+      <p>&copy; Batmanes del Mercosur</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+    <!-- Status site logic. -->
+    <script>
+      $(document).ready(function() {
+          $('#batiin').keyup(function() {
+              var text = $('#batiin').val()
+              var coded = text.replace(/ ([a-z])/g, ' bati$1')
+              coded = coded.replace(/ ([A-Z])/g, ' Bati$1')
+              $('#batiresult').text(coded)
+          })
+      })
+    </script>
+  </body>
+</html>
